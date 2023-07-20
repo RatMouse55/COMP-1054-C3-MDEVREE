@@ -1,28 +1,28 @@
-/* General Reset */ 
+/* General Reset */
 
 * {
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Typography */ 
+/* Typography */
 
-/* body content */ 
+/* body content */
 body {
-    font-family: 'Shantell Sans', cursive;
+    font-family: "Shantell Sans", cursive;
     font-size: 1.125rem;
-    line-height: 1.6;   
+    line-height: 1.6;
 }
 
 /* headings */
 h1,
-h2, 
-h3, 
-h4, 
-h5, 
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-family: 'Rampart One', cursive;
+    font-family: "Rampart One", cursive;
 }
 
 h1 {
@@ -30,54 +30,90 @@ h1 {
 }
 
 p:has(> a) {
-    text-align: center; 
+    text-align: center;
 }
 
-/* Layout & Apperance */ 
+/* Layout & Apperance */
 
 header {
     height: 15vw;
-    background-color:#FF8360; 
-    color: #fff;   
+    background-color: #ff8360;
+    color: #fff;
 }
 
 .main-wrapper {
-    width: 80vw; 
+    width: 80vw;
     margin: 0 auto;
-    border: 2px solid #999; 
-    padding: 1em;  
+    border: 2px solid #999;
+    padding: 1em;
 }
 
-/* section */ 
+/* section */
 main section > div + p {
-    background-color: #3CDBD3;
-    padding: 1em;  
+    background-color: #3cdbd3;
+    padding: 1em;
 }
 
 main section:nth-of-type(2) p {
-    background-color: #E8E288;
-    padding: 1em;  
+    background-color: #e8e288;
+    padding: 1em;
 }
 
-/* footer */ 
+/* footer */
 
 footer p,
 footer a {
-    background-color:#7DCE82; 
+    background-color: #7dce82;
     color: #fff;
     padding: 2em;
-    border: 2px solid #fff;  
+    border: 2px solid #fff;
 }
 
 footer p {
-    text-align:center;  
+    text-align: center;
 }
 
 footer a {
-    background-color:#FF8360;
+    background-color: #ff8360;
 }
 
 footer a:hover {
-    background-color: #9C528B; 
+    background-color: #9c528b;
 }
 
+/* flex */
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+footer p {
+    flex: 1 1 50%;
+}
